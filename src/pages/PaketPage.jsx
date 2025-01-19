@@ -4,9 +4,9 @@ import FaqComponent from "../components/FaqComponent";
 
 const PaketPage = () => {
   // Click handler function to redirect
-  const handleBuyClick = () => {
-    // Redirect to redirect.html
-    window.location.href = "/redirect.html"; // Adjust the path as necessary
+  const handleBuyClick = (kelas) => {
+    // Redirect to Redirect/Redirect.html
+    window.location.href = "/Redirect/Redirect.html"; // Adjust the path as necessary
   };
 
   return (
@@ -25,8 +25,7 @@ const PaketPage = () => {
                 className="text-center animate__animated
                 animate__fadeInUp animate__delay-1s"
               >
-                Beberapa paket lengkap untuk pengurusan pemakaman yang kami
-                tawarkan untuk Anda dan keluarga
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </Col>
           </Row>
@@ -54,7 +53,7 @@ const PaketPage = () => {
                     <p className="m-0 text-primary fw-bold">{kelas.price}</p>
                     <button
                       className="btn btn-danger rounded-1"
-                      onClick={handleBuyClick} // Attach the click handler
+                      onClick={() => handleBuyClick(kelas)} // Attach the click handler
                     >
                       {kelas.buy}
                     </button>
